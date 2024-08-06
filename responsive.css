@@ -22,6 +22,21 @@
     h1{
         font-size: 25px;
     }
+    .soft{
+        width: 100px;
+        gap: 20px;
+
+    }
+    .header-section,
+    .resume,
+    .about-section,
+    .skills,
+    .works
+    {
+        height: auto;
+    }
+   
+
 
 
   }

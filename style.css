@@ -37,9 +37,10 @@ a:hover{
     padding-bottom: 35px;
 }
 h1{
+  font-size: 2.3rem;
   color: var(--yellow);
   font-weight: 800;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 p{
   font-size: 15px;
@@ -48,7 +49,7 @@ p{
 }
 
 
-.navbar{
+/* .navbar{
   background-color: rgba(0, 19, 33);
   position: fixed;
   top: 0;
@@ -58,7 +59,7 @@ p{
   min-height: 0;
   z-index: 999;
   padding: 15px 0px;
-}
+} */
 .nav-background{
     background-color: rgba(0, 19, 33);
 }
@@ -70,6 +71,9 @@ p{
 .nav-link:hover{
   color: rgba(246, 190, 0);
 }
+.nav-link2 a:hover{
+  box-shadow: 0 0 1rem var(--yellow);
+} 
 .white{
     color: white;
 }
@@ -116,10 +120,10 @@ p{
     color: rgba(139, 208, 255);
 }
 .potrait-slider{
-    width: 100%;
+    width: 90%;
     /* position: absolute; */
     padding: 25px 20px;
-    padding-top: 160px;
+    padding-top: 20px;
     -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     
@@ -162,7 +166,10 @@ p{
     padding: 10px 15px;
     width: 115px;
     text-align: center;
-    box-shadow: 0 0 1rem rgba(0, 64, 208);
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px var(--blue);
+}
+.button-box:hover{
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px var(--blue);
 }
 .button-box a:hover{
   color: rgba(246, 190, 0);
@@ -216,7 +223,7 @@ p{
     padding: 10px 20px;
     font-size: 18px;
     width: 130px;
-    box-shadow: 0 0 1rem rgba(246, 190, 0);
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px var(--yellow);
 }
 .download-btw a{
     color: white;
@@ -225,7 +232,7 @@ p{
 .download-btw:hover{
   background-color: var(--sky);
   color: var(--darkblue);
-  box-shadow: 0 0 1rem var(--sky);
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px var(--sky);
 }
 
 /* about-section ends*/
@@ -245,18 +252,21 @@ p{
 
 
 .portfolio-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2.5rem;
+  
 }
 
 .portfolio-container .portfolio-box{
   position: relative;
   border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--sky);
+  box-shadow: 0 0 1rem var(--blue);
   overflow: hidden;
   display: flex;
+  height: 240px;
+  width: 350px ;
 }
 .portfolio-box img{
   width: 100%;
@@ -344,6 +354,13 @@ p{
 }
 .soft{
   width: 150px;
+  transition: all 0.16s ease-in;
+  
+}
+.soft:hover{
+  position: relative;
+  top: -5px;
+  transform: scale(1.1);
   
 }
 .soft img{
@@ -364,7 +381,50 @@ p{
 
 }
 /* My works */
+.card {
+	position: relative;
+	height: 430px;
+  width: 330px;
+	box-shadow: 5px 5px 20px;
+	overflow: hidden;
+	cursor: pointer;
+  border-radius: 5%;
+}
+.card-con {
+	display: flex;
+	gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.intro {
+	position: absolute;
+	height: 73px;
+	width: 330px;
+	bottom: 0;
+	overflow: hidden;
+	padding: 10px;
+	color: #fff;
+	background-color: rgba(55, 55, 55, 0.618);
+	transition: .4s ease-in-out;
+  text-align: center;
+}
 
+.card:hover .intro {
+	height: 200px;
+	bottom: 0;
+	background-color: #000;
+}
+.card:hover img {
+	transform: scale(1.1);
+}
+
+.cardimg {
+	height: 500px;
+	width: 350px;
+	object-fit: cover;
+	border-radius: 4px;
+	transition: transform .4s ease-in-out;
+}
 /* footer */
 .footer{
     background-color: black;
@@ -466,11 +526,11 @@ p{
  }
  @media (max-width:360px) {
   .type-write a{
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 600;
    }
   .hello{
-    font-size: 18px;
+    font-size: 20px;
 } 
 .about-header{
   color: var(--white);
@@ -497,6 +557,12 @@ p{
  .email-img{
   padding: 10px;
   width: 90%;
+ }
+ .text-h1{
+  font-size: 25px;
+ }
+ .text-h2{
+  font-size: 28px;
  }
   
   
